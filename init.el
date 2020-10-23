@@ -1,7 +1,3 @@
-;; remover menus
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-
 ;; remover boas vindas
 (setq inhibit-startup-screen t)
 
