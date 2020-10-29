@@ -24,8 +24,8 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
- 
-(load-theme 'monokai t) 
+
+(load-theme 'monokai t)
 
 (use-package auto-complete
   :ensure t
@@ -41,7 +41,7 @@
   :ensure t
   :config
   (progn
-    (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))) 
+    (setq neo-theme (if (display-graphic-p) 'icons 'arrow))))
 
 ;; atalhos
 (global-set-key (kbd "C-<tab>") 'other-window)
@@ -50,3 +50,8 @@
 (global-set-key (kbd "M-<left>") 'enlarge-window-horizontally)
 (global-set-key (kbd "M-<right>") 'shrink-window-horizontally)
 
+(with-eval-after-load 'whitespace
+  (setq whitespace-line-column nil
+        whitespace-style '(face trailing lines-tail
+                                space-before-tab newline
+                                indentation empty space-after-tab)))
