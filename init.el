@@ -1,3 +1,5 @@
+(require 'iso-transl)
+
 ;; remover boas vindas
 (setq inhibit-startup-screen t)
 
@@ -55,3 +57,8 @@
         whitespace-style '(face trailing lines-tail
                                 space-before-tab newline
                                 indentation empty space-after-tab)))
+
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
